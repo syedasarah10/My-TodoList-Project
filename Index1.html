@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="content">
+      <header class="header">
+          <h1 class="page-name">My Todo List</h1>
+        </div>
+      </header>
+      <main class="main">
+        <nav class="nav" id="nav">
+          <!-- Default projects -->
+          <h1 class="projects-title">
+            <i class="far fa-folder-open"></i>Projects</h1>
+          <div class="projects-list" id="projects-list">
+          </div>
+          <form class = "add-new-project-form"project-new-list-form>
+          <div class="add-project-popup" id="add-project-popup">
+            <input
+              class="input-add-project-popup"
+              id="input-add-project-popup"
+              type="text"
+              placeholder="Add new Project"
+              required
+              autocomplete="off"
+            />
+            </div>
+          </form>
+          </div>
+        </nav>
+        <!-- Tasks -->
+        <div class="project-preview" id="project-preview">
+          <h1 class="project-name"></h1>
+        <div class="tasks-list" id= "tasks-list">
+            <!-- <button class="button-task" data-task-button>
+                <div class="left-task-side">
+                    <i class="far fa-circle"><p class="task-content">Task1</p>
+                    </i>
+                </div>
+                <div class="right-task side">
+                  <i class="fas fa-times"></i>
+                </div>
+            </button> -->
+        </div>
+        
+      </main>
+    </div>
+
+
+    <script src="app.js"></script>
+    <script src="task.js"></script>
+    <script src="project.js"></script>
+  </body>
+</html>
+</html>

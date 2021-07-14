@@ -1,0 +1,374 @@
+:root {
+  --primary-dark: rgb(0, 0, 0);
+  --secondary-dark: rgb(0, 0, 0);
+  --primary-light: rgb(135, 200, 243);
+  --secondary-light: rgb(134, 136, 247);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.6;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", sans-serif;
+  color: var(--primary-dark);
+  background-color: var(--primary-light);
+}
+
+header {
+  font-size: 2.4rem;
+}
+
+button {
+  display: block;
+  padding: 1rem;
+  border: none;
+  border-radius: 5px;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+input {
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+}
+
+/* i {
+  margin-right: 1rem;
+} */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+}
+
+.page-name {
+  font-family: cursive;
+  font-size: 2rem;
+}
+
+.button-open-nav {
+  display: none;
+  background-color: var(--primary-dark);
+  font-size: 4rem;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  min-height: calc(120vh - 10.4rem);
+}
+
+.nav {
+  flex: 1;
+  max-width: 300px;
+  max-height: 1400px;
+  padding: 2rem;
+  background-color: var(--secondary-light);
+}
+
+.nav.active {
+  display: block;
+}
+
+.button-default-project {
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.user-projects {
+  position: relative;
+}
+
+.projects-title {
+  padding: 1rem;
+  margin-top: 1rem;
+}
+
+.button-project {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.button-add-project {
+  display: block;
+  width: 100%;
+  margin-top: 1rem;
+  margin-left: 0.2rem;
+  background-color: var(--secondary-light);
+  text-align: left;
+}
+
+.button-add-project.active {
+  display: none;
+}
+
+.button-project.active,
+.button-default-project.active {
+  font-weight: bold;
+  background-color: #ccc;
+}
+
+.button-project:hover,
+.button-default-project:hover,
+.button-add-project:hover {
+  background-color: #ccc;
+}
+
+.right-project-panel {
+  visibility: hidden;
+}
+
+.button-project:hover .right-project-panel {
+  visibility: visible;
+}
+
+.fa-times {
+  margin-right: 0;
+}
+
+.fa-times:hover {
+  cursor: pointer;
+}
+
+.add-project-popup {
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.add-project-popup.active {
+  display: block;
+}
+
+.input-add-project-popup {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.add-project {
+  font-size: 2rem;
+  cursor: pointer;
+  width: 30px;
+  position: absolute;
+  font-weight: 900;
+}
+
+.button-cancel-project-popup {
+  width: 100%;
+  border: 1px solid #eeadad;
+  background-color: #ffbebe;
+  font-weight: bold;
+}
+
+.button-cancel-project-popup:hover {
+  background-color: #f5b2b2;
+}
+
+.project-preview {
+  flex: 5;
+  max-width: 900px;
+  padding: 2rem 4rem;
+}
+
+.project-preview h1 {
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.button-task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--primary-light);
+  cursor: default;
+}
+
+.left-task-panel {
+  display: flex;
+  align-items: center;
+}
+
+.fa-circle {
+  font-size: 2.4rem;
+  cursor: pointer;
+  margin-right: 1rem;
+}
+
+.task-content {
+  cursor: pointer;
+}
+
+.task-content.active {
+  display: none;
+}
+
+.input-task-name {
+  display: none;
+  height: 2.4rem;
+  padding: 0.5rem;
+  border: 1px solid #555;
+  border-radius: 5px;
+  background-color: var(--primary-light);
+  color: inherit;
+  font-family: inherit;
+}
+
+.input-task-name.active {
+  display: block;
+}
+
+.right-task-panel {
+  display: flex;
+  align-items: center;
+}
+
+.right-task-panel p {
+  margin-right: 1rem;
+}
+
+.button-task .right-task-panel i {
+  visibility: hidden;
+  cursor: pointer;
+}
+
+.button-task:hover .right-task-panel i {
+  visibility: visible;
+}
+
+.button-add-task {
+  display: block;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.button-add-task.active {
+  display: none;
+}
+
+.button-add-task:hover {
+  background-color: #ddd;
+}
+
+.add-task-popup {
+  display: none;
+  width: 100%;
+  padding: 1rem;
+  text-align: center;
+}
+
+.add-task-popup.active {
+  display: block;
+}
+
+.input-add-task-popup {
+  width: 95%;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+.input-add-description-popup {
+  width: 95%;
+  padding: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+}
+
+.add-task-popup-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.button-add-task-popup {
+  width: 45%;
+  border: 1px solid #99dd99;
+  background-color: #aaffaa;
+  font-weight: bold;
+}
+
+.priority {
+  width: 20%;
+  border: 1px solid #99dd99;
+  height: 30px;
+  cursor: pointer;
+}
+
+.button-cancel-task-popup {
+  width: 45%;
+  border: 1px solid #eeadad;
+  background-color: #ffbebe;
+  font-weight: bold;
+}
+
+.button-add-task-popup:hover {
+  background-color: #a6f0a6;
+}
+
+.button-cancel-task-popup:hover {
+  background-color: #f5b2b2;
+}
+
+.project {
+  padding: 5px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.add-task-icon {
+  margin-right: 1rem;
+}
+
+.fa-folder-open {
+  margin-right: 1rem;
+}
+
+.task-id {
+  text-transform: capitalize;
+}
+
+.task-content {
+  margin-left: 1rem;
+}
+
+.completed {
+  text-decoration: line-through;
+}
+
+.checked {
+  background-color: #66de93;
+  border-radius: 50%;
+}
